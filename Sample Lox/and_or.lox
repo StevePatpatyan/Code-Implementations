@@ -1,0 +1,5 @@
+print "hi" or 2;
+print nil or "fallback"; 
+print 1 and 2;
+print nil and 3;
+print 3 and nil;
