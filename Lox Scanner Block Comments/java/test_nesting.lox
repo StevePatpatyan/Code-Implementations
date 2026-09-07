@@ -1,0 +1,15 @@
+print "before";
+
+/*
+  Outer comment
+
+  /*
+    Nested comment
+  */
+
+  Back in outer comment
+*/
+
+print "after";
+
+// run java -cp . com.craftinginterpreters.lox.Lox test_nesting.lox to test

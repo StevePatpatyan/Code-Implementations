@@ -1,0 +1,10 @@
+print "before";
+
+/*
+  hello
+  this is a multiline comment
+*/
+
+print "after";
+
+// run java -cp . com.craftinginterpreters.lox.Lox test.lox to test

@@ -1,0 +1,9 @@
+print "before";
+
+/*
+  This is an unterminated block comment.
+  There is no closing delimiter.
+
+print "after";
+
+// run java -cp . com.craftinginterpreters.lox.Lox test_unterminated.lox to test
