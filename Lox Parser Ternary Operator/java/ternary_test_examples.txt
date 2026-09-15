@@ -1,0 +1,43 @@
+// basic ternary expressions
+true ? 1 : 2
+false ? 1 : 2
+
+// boolean conditions
+true ? true : false
+false ? true : false
+
+// arithmetic expressions inside ternary
+1 < 2 ? 3 : 4
+1 > 2 ? 3 : 4
+1 + 2 == 3 ? 10 : 20
+
+// ternary precedence
+1 + 2 < 4 ? 10 : 20
+1 * 2 == 2 ? 30 : 40
+
+// parenthesized ternary expressions
+(true ? 1 : 2)
+(false ? 3 : 4)
+
+// nested ternary in the then branch
+true ? false ? 1 : 2 : 3
+false ? false ? 1 : 2 : 3
+
+// nested ternary in the else branch
+true ? 1 : false ? 2 : 3
+false ? 1 : false ? 2 : 3
+
+// mixing ternary with comma expressions
+true ? 1, 2 : 3
+false ? 1 : 2, 3
+
+// parentheses distinguish the grouping
+(true ? 1 : 2), 3
+true ? (1, 2) : 3
+
+run java -cp . com.craftinginterpreters.lox.Lox and type these expressions in without print part to see how they parse
+* The run command was edited so we see the AST printing.
+
+// uncomment the original run method in Lox.java and use print in the interpreter
+// followed by the expressions to see the return value
+// dont forget to recompile

@@ -1,0 +1,52 @@
+// normal expressions should work
+1 + 2;
+3 - 1;
+4 * 5;
+10 / 2;
+
+1 < 2;
+2 <= 2;
+3 > 2;
+3 >= 3;
+
+1 == 1;
+1 != 2;
+
+// unary minus should not produce "Missing left-hand operand."
+-5;
+-(3 + 2);
+-5 * 2;
+-10 + 3;
+
+// binary operators without a left-hand operand
++ 5;
+* 5;
+/ 5;
+> 5;
+>= 5;
+< 5;
+<= 5;
+== 5;
+!= 5;
+
+// operators followed by more complicated expressions
++ 2 * 3;
+* 2 + 3;
+> 2 + 3;
+== 2 * 3;
+
+// multiple errors in one expression
++ 2 * 3 + 4;
+* 2 + 3;
+== 2 < 3;
+
+// errors followed by valid statements
++ 10;
+1 + 2;
+* 20;
+3 * 4;
+-30;
+5 - 2;
+
+
+// java -cp . com.craftinginterpreters.lox.Lox error_test.lox

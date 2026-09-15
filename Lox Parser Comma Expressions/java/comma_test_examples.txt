@@ -1,0 +1,18 @@
+1, 2
+1, 2, 3
+1 + 2, 3 + 4
+1 * 2, 3 * 4
+(1, 2)
+(1, 2, 3)
+((1, 2), 3)
+(1, (2, 3))
+foo(1,2)
+1, foo(1,2)
+foo (1,2)(3,4) // 2 calls
+
+run java -cp . com.craftinginterpreters.lox.Lox and type these expressions in to see how they parse
+* The run command was edited so we see the AST printing.
+
+// uncomment the original run method in Lox.java and use print in the interpreter
+// followed by the expressions to see the return value
+// dont forget to recompile
