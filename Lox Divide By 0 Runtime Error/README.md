@@ -1,0 +1,1 @@
+See Interpreter.java visitBinaryExpr() in the SLASH case for the implementation. Test by compiling and running the test.lox file with the interpreter while in "java" folder. I put it directly in case SLASH rather than checkNumberOperands method because it would be unnecessary on the other cases.

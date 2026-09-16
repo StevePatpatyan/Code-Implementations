@@ -1,0 +1,13 @@
+// normal division
+print 10 / 2;
+print 7 / 2;
+print 10.0 / 4.0;
+
+// division by zero
+print 10 / 0;
+
+// these should not be reached if the interpreter stops after the runtime error
+print 20 / 5;
+print 0 / 10;
+
+// java -cp . com.craftinginterpreters.lox.Lox test.lox

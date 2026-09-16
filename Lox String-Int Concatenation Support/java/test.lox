@@ -1,0 +1,32 @@
+// string + string
+print "hello " + "world";
+
+// string + number
+print "scone" + 4;
+
+// number + string
+print 4 + "scones";
+
+// string + boolean
+print "value: " + true;
+
+// boolean + string
+print false + " is false";
+
+// string + nil
+print "value: " + nil;
+
+// number + number should still work
+print 10 + 20;
+
+// string + string with spaces
+print "The answer is " + "42";
+
+// multiple concatenations
+print "I have " + 3 + " apples";
+
+// should cause errors because neither operand is a string
+print true + false;
+print 10 + true;
+
+// java -cp . com.craftinginterpreters.lox.Lox test.lox

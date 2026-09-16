@@ -1,0 +1,1 @@
+See visitBinaryExpr() in Interpreter.java. The PLUS case is mdofied so it checks if EITHER the left OR right operand is string, then it will stringify both operands and concatenate as a string. I also edit the error message to adjust to this.
