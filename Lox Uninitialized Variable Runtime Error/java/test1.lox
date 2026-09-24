@@ -1,0 +1,8 @@
+// uninitialized variables should produce an error
+var a;
+print a;
+
+// this should never be reached
+print "after a";
+
+// java -cp . com.craftinginterpreters.lox.Lox test1.lox

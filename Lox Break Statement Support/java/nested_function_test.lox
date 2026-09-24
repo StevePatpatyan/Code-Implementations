@@ -1,0 +1,9 @@
+while (true) {
+    fun test() { 
+        break; // try adding a while loop here, there should not be an error
+    }
+
+    break;
+}
+
+// java -cp . com.craftinginterpreters.lox.Lox nested_function_test.lox

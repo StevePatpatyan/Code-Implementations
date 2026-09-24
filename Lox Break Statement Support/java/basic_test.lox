@@ -1,0 +1,12 @@
+var i = 0;
+
+while (true) {
+    print i;
+    i = i + 1;
+
+    if (i == 3) break;
+}
+
+print "Done";
+
+// java -cp . com.craftinginterpreters.lox.Lox basic_test.lox

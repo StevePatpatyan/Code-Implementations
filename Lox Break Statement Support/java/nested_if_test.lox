@@ -1,0 +1,16 @@
+var i = 0;
+
+while (true) {
+    {
+        if (true) {
+            break;
+        }
+    }
+
+    print "This should not print.";
+    i = i + 1;
+}
+
+print "After loop";
+
+// java -cp . com.craftinginterpreters.lox.Lox nested_if_test.lox

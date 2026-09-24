@@ -1,0 +1,1 @@
+In Interpreter.java, we first add a sentinel for an uninitialized variable at the top. Then we edit the visitVarStmt() method and set the initial value to UNINITIALIZED instead of null. Finally, change visitVariableExpr() to throw a runtime error if the variable value as a result of lookup is UNINITIALIZED.

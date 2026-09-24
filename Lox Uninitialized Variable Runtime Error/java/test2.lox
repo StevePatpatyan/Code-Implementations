@@ -1,0 +1,9 @@
+var a;
+var b;
+
+a = "assigned";
+
+print a;
+print b;
+
+// java -cp . com.craftinginterpreters.lox.Lox test2.lox
