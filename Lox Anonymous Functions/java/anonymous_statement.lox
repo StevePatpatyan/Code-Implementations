@@ -1,0 +1,3 @@
+fun () {}; // make sure no error expecting name
+
+// java -cp . com.craftinginterpreters.lox.Lox anonymous_statement.lox

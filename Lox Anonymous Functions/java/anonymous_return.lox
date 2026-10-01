@@ -1,0 +1,10 @@
+fun makeGreeter() {
+  return fun (name) {
+    print "Hello, " + name;
+  };
+}
+
+var greeter = makeGreeter();
+greeter("Stephen");
+
+// java -cp . com.craftinginterpreters.lox.Lox anonymous_return.lox

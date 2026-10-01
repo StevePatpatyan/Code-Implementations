@@ -1,0 +1,36 @@
+{
+  var used = "hello";
+  print used;
+}
+
+{
+  var unused = "goodbye";
+}
+
+{
+  class Foo {}
+}
+
+{
+  class Bar {
+    method() {
+      print this;
+    }
+  }
+}
+
+{
+  class Parent {
+    method() {
+      print "parent";
+    }
+  }
+
+  class Child < Parent {
+    method() {
+      super.method();
+    }
+  }
+}
+
+// java -cp . com.craftinginterpreters.lox.Lox test.lox

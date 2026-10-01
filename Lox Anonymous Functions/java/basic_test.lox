@@ -1,0 +1,7 @@
+var f = fun () {
+  print "hello";
+};
+
+f();
+
+// java -cp . com.craftinginterpreters.lox.Lox basic_test.lox

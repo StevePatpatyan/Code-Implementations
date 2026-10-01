@@ -1,0 +1,65 @@
+// local variables, assigning, uninitialized slot
+{
+  var a;
+  var b = "b";
+  a = "a";
+  print a; // output a
+  print b; // output b
+}
+
+
+// function parameter and body local var
+fun f(p) {
+  var q = p + 1;
+  print p; // output 1
+  print q; // output 2
+}
+f(1);
+
+// closure of scope over a local, so "c" keeps the same instance of inc(), which retains "n"
+fun counter() {
+  var n = 0;
+  fun inc() { n = n + 1; return n; }
+  return inc;
+}
+var c = counter();
+print c(); // output 1
+print c(); // output 2
+
+// shadowing and closure referencing
+var x = "global";
+{
+  fun show() { print x; }
+  show(); // output global
+  var x = "local";
+  show(); // output global
+  print x; // output local
+}
+
+// this
+class A {
+  init(n) { this.n = n; }
+  get() { return this.n; }
+}
+print A("a").get(); // output a
+
+// super
+class B < A {
+  get() {
+    var base = super.get();
+    return base + "b";
+  }
+}
+print B("x").get(); // output xb
+
+// class declared in a local scope
+fun outer() {
+  var first = "first";
+  class L { me() { return L; } }
+  print first;        // output first
+  print L().me();     // outer L
+}
+outer();
+
+
+// java -cp . com.craftinginterpreters.lox.Lox test.lox

@@ -1,0 +1,7 @@
+var add = fun (a, b) {
+  return a + b;
+};
+
+print add(2, 3);
+
+// java -cp . com.craftinginterpreters.lox.Lox anonymous_with_params.lox
