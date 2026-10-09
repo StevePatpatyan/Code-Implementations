@@ -1,0 +1,29 @@
+trait Greeter {
+  greet() { print "Hi, I'm " + this.name; }
+}
+trait Loud {
+  shout() { print this.name + "!!!"; }
+}
+trait Polite {
+  greet() { print "Good day, " + this.name; }
+}
+
+class Person {
+  init(name) { this.name = name; }
+  greet() { print "(superclass greet)"; }
+}
+
+class A < Person with Greeter, Loud {}
+A("Ann").greet();   // output Hi, I'm Ann (trait over superclass)
+A("Ann").shout();   // output Ann!!!
+
+class B < Person with Greeter, Polite {
+  greet() { print "Hello, " + this.name; }
+}
+B("Cy").greet();    // output Hello, Cy (explicit in class over everything)
+
+class C < Person with Greeter, Polite {}
+// Runtime error because "greet" method is provided by both trait "Greeter"
+// and trait "Polite". Define it in the class to resolve.
+
+// java -cp . com.craftinginterpreters.lox.Lox test.lox

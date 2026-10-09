@@ -1,0 +1,12 @@
+var xs = [1, 2, 3];
+push(xs, 4);
+xs[0] = xs[0] + 10;
+print xs;        // expect [11, 2, 3, 4]
+print len(xs);   // expect 4
+print pop(xs);   // expect 4
+
+for (var i = 0; i < len(xs); i = i + 1) print xs[i];
+
+print xs[4];
+
+// java -cp . com.craftinginterpreters.lox.Lox test.lox
