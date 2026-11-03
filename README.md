@@ -5,4 +5,6 @@ Java Interpreter and C Interpreter files taken/adapted from https://github.com/m
 
 **To run interpreter: java -cp . com.craftinginterpreters.lox.Lox**
 
+**To run clox, go to "c" directory and run "make clox" from the Makefile there**
+
 **Wherever there is an edit in GenerateAst.java, assume it has been compiled and ran to adjust the lox java source code.**
