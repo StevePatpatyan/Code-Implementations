@@ -1,0 +1,23 @@
+for (var i = 0; i < 5; i = i + 1) {
+  var a = "outer";
+  {
+    var b = "inner";
+    if (i == 2) continue; // pops b and a then runs i = i + 1
+  }
+  print i;
+}
+// 0 1 3 4
+
+var n = 0;
+while (n < 5) {
+  n = n + 1;
+  var tmp = n;
+  if (n == 3) continue; // pops tmp and jumps to condition
+  print n;
+}
+// 1 2 4 5
+
+// continue; 
+
+// you can uncomment the continue above to see
+// error: can't use continue outside of a loop

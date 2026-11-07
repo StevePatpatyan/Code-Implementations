@@ -1,0 +1,10 @@
+const a = 1;
+print a;      // ok
+a = 2;        // Error at '=': Can't assign to a const variable.
+
+{
+  const b = 3;
+  b = 4;      // Error at '=': Can't assign to a const variable.
+  var c = 5;
+  c = 6;      // ok
+}

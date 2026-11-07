@@ -1,0 +1,44 @@
+// "one"
+var x = 1;
+switch (x) {
+  case 1: print "one";
+  case 2: print "two";
+  case "hi": { print "greeting"; }
+  default: print "other";
+}
+
+// "two"
+x = 2;
+switch (x) {
+  case 1: print "one";
+  case 2: print "two";
+  case "hi": { print "greeting"; }
+  default: print "other";
+}
+
+// "greeting"
+x = "hi";
+switch (x) {
+  case 1: print "one";
+  case 2: print "two";
+  case "hi": { print "greeting"; }
+  default: print "other";
+}
+
+// "other"
+x = nil;
+switch (x) {
+  case 1: print "one";
+  case 2: print "two";
+  case "hi": { print "greeting"; }
+  default: print "other";
+}
+
+// no default and no match so prints nothing
+switch (99) { case 1: print "no"; }
+
+// matching case with no default
+switch (1) { case 1: print "match"; }
+
+// case value is an expression
+switch (4) { case 2 + 2: print "four"; default: print "wrong"; }
