@@ -1,0 +1,3 @@
+print sqrt(4);
+print sqrt("hello");
+print sqrt(5);
